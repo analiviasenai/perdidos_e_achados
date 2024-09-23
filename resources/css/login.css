@@ -31,9 +31,8 @@ body {
 }
 .menu-icon {
     position: absolute;
-    top: 50px;
+    top: 20px;
     right: 20px;
-    background-color: #3f51b5;
     color: #ffffff;
     font-size: 24px;
     cursor: pointer;
@@ -67,8 +66,13 @@ body {
     margin-bottom: 20px;
 }
 .logo img {
-    width: 140px;
-    height: 120px;
+    width: 50px;
+    height: 50px;
+}
+.logo-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3b4a9e;
 }
 .input-field {
     width: 100%;
@@ -78,7 +82,7 @@ body {
     border-radius: 25px;
     box-sizing: border-box;
 }
-.login-button {
+#entrar{
     width: 100%;
     padding: 10px;
     margin: 20px 0;
@@ -89,6 +93,6 @@ body {
     cursor: pointer;
     font-size: 16px;
 }
-.login-button:hover {
+#entrar:hover {
     background-color: #2a3570;
 }

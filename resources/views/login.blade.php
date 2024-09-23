@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pagina de Login</title>
+    <title>Página de Login</title>
     <link rel="stylesheet" href="login.css">
     @vite('/resources/css/login.css')
     @vite('/resources/js/login.js')
@@ -22,6 +22,7 @@
        </script>
 </head>
 <body>
+     <script src="login.js"></script>
     <div class="back-arrow">
         <a href="home.html">
          <i class="fas fa-arrow-left">
@@ -55,9 +56,8 @@
         </div>
         <input class="input-field" placeholder="e-mail" type="text"/>
         <input class="input-field" placeholder="Senha" type="password"/>
-        <button class="login-button">
-         ENTRAR
-        </button>
+        <button id="entrar" onclick="login()">ENTRAR</button>
+            
        </div>
 </body>
 </html>

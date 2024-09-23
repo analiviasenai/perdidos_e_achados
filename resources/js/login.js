@@ -1,25 +1,39 @@
-document.getElementById('login-form').addEventListener('submit', (e) => {
-    e.preventDefault();
+function toggleDropdown() {
+    var dropdown = document.getElementById('dropdown');
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+    } else {
+        dropdown.style.display = 'block';
+    }
+  }
   
-    const usuario = document.getElementById('usuario').value;
-    const senha = document.getElementById('senha').value;
+  function login() {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
   
-    fetch('/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ usuario, senha })
+    fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password })
     })
-    .then(response => response.json())
-    .then(data => {
-      if (data.autenticado) {
-        window.location.href = '/pagina-de-destino';
-      } else {
-        alert('Credenciais inválidas');
-      }
+    .then(response => {
+        if (response.status === 200) {
+            alert('Login successful');
+        } else {
+            alert('Invalid credentials');
+        }
     })
     .catch(error => {
-      console.error('Erro ao autenticar usuário:', error);
+        console.error('Error:', error);
     });
-  });
+  }
+ 
+const button = document.getElementById('entrar');
+
+// Adicione um evento de clique ao botão
+button.addEventListener('click', function() {
+  // Quando o botão for clicado, redirecione para a outra página
+  window.location.href = 'home.html';
+});
