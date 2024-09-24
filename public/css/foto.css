@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+}
+.header h1 {
+    font-size: 24px;
+    color: #331874;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+.header img {
+    font-size: 24px;
+    color: #4a148c;
+}
+.menu {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #3f51b5;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    display: none;
+    flex-direction: column;
+}
+.menu.active {
+    display: flex;
+}
+.menu a {
+    padding: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ffffff;
+}
+.menu a:last-child {
+    border-bottom: none;
+}
+.menu a i {
+    margin-right: 10px;
+}
+.menu .close-icon {
+    align-self: flex-end;
+    padding: 10px;
+    cursor: pointer;
+}
+.header .advance {
+    font-size: 16px;
+    color: #331874;
+}
+.divider {
+    height: 1px;
+    background-color: #331874;
+    margin: 0 20px;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #ccc;
+}
+.footer .close-icon {
+    font-size: 24px;
+    color: #331874;
+}
+.advance{
+    color: black;
+}
+
+
+/*camera*/
+
+#camera{
+    width: 700px;
+    height: 470px;
+    margin: 0px auto;
+    position: relative;
+}
+#video,#captura{
+    width: 700px;
+    height: 500px;
+    position: absolute;
+}
+.botaoCamera{
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+#botao{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.captura{
+    width: 1000px;
+    height: 100px;
+}
+
+
+/*upload*/
+
+.centered-upload-button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 300px; /* adjust the max width as needed */
+}
+
+@media (max-width:700px){
+    .header{
+    width: 700px;
+    margin: 0px auto; 
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    }
+    .footer{
+        width: 700px;
+        margin: 0px auto;
+    }
+    #camera{
+        width: 100% auto;
+    }
+    #video, #captura {
+    width: 100% auto;
+    }
+
+}
