@@ -16,7 +16,8 @@ return new class extends Migration
     {
         Schema::create('fotos_achadoseperdidos', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->binary('source');
+            $table->string('descricao');
             $table->string('airline');
             $table->timestamps();
         });

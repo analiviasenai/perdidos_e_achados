@@ -55,7 +55,7 @@
           Ernesto Coordenador
          </div>
         </div>
-        <img height="200" src="./img/fone.avif" width="300"/>
+        <img src="{{ asset('img/celularperdido.png') }}" height="350" width="300"></img>
         <div class="description">
          Encontrado no refeitório, às 12:45
         </div>
@@ -81,7 +81,7 @@
          </div>
         
         </div>
-        <img height="200" src="./img/garrafa.jpg" width="300"/>
+        <img src="{{ asset('img/garrafa.png') }}" height="350" width="300"></img>
         <div class="description">
          Encontrado na sala de limpeza, às 14:30
         </div>
@@ -106,7 +106,7 @@
           Ernesto Coordenador
          </div>
         </div>
-        <img height="200" src="./img/carteira.jpeg" width="300"/>
+        <img src="{{ asset('img/carteira.png') }}" height="350" width="300"></img>
         <div class="description">
          Encontrado na biblioteca, às 10:00
         </div>
@@ -132,7 +132,7 @@
          </div>
     
         </div>
-        <img height="200" src="./img/chave.jpg" width="300"/>
+        <img src="{{ asset('img/chavesperdidas.png') }}" height="350" width="300"></img>
         <div class="description">
          Encontrado no corredor, às 09:15
         </div>

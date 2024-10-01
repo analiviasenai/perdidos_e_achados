@@ -26,7 +26,7 @@
         <i class="fas fa-bars menu-icon" onclick="toggleMenu()">
         </i>
         <div class="menu" id="menu">
-         <a href="home.html">
+         <a href="{{ route('home') }}">
           Página Inicial
          </a>
          <a href="foto.html">
@@ -50,21 +50,27 @@
           NOVA PUBLICAÇÃO
          </div>
         </div>
+        <form method="POST" enctype="multipart/form-data">
         <div class="image-container">
-         <img alt="" width="600"/>
+            <img id="uploaded-image" src="" alt="Imagem enviada">
+            <input id="input-img" type="hidden" name="img" value="" />
+            <script>
+              const base64String = localStorage.getItem('image');
+              const img = document.getElementById('uploaded-image');
+              img.src = base64String;
+              const imgInput = document.getElementById('input-img');
+              imgInput.value = base64String;
+            </script>
         </div>
         <div class="caption-input-container">
-         <textarea class="caption-input" placeholder=" ">
+         <textarea class="caption-input" placeholder=" " name="descricao">
          </textarea>
-         <div class="caption-placeholder">
-          Escreva uma legenda...
-         </div>
         </div>
         <div class="options">
          <div class="option">
           <i class="fas fa-folder">
           </i>
-          <select class="select-category">
+          <select class="select-category" name="airline">
            <option value="eletronicos">
             Eletrônicos
            </option>
@@ -80,9 +86,10 @@
           </select>
          </div>
         </div>
-        <a class="share-button" href="#">
+        <a class="share-button" type="submit">
          Compartilhar
         </a>
+        </form>
        </div>
        <script>
         const captionInput = document.querySelector('.caption-input');

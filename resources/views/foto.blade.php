@@ -13,7 +13,7 @@
     <script src="{{ asset('js/foto.js') }}"></script>
     <div class="header">
         <h1>ENCONTRE JÁ</h1>
-        <img src="./img/hamburguer.png" onclick="toggleMenu()" width="50" height="50">
+        <img src="{{ asset('img/hamburguer.png') }}" onclick="toggleMenu()" width="50" height="50">
     </div>
        <div class="menu" id="menu">
         <div class="close-icon" onclick="toggleMenu()">
@@ -43,11 +43,8 @@
     </div>
     <div class="divider"></div>
     <div class="footer">
-        <img src="{{ Storage::url('img/hamburguer.png') }}" height="40" width="40"></img>
+        <img src="{{ asset('img/x.png') }}" height="40" width="40"></img>
         
-        <a href="postar.html">
-            <div class="advance">AVANÇAR</div>
-          </a>
     </div>
     
     <div id="camera">
@@ -58,13 +55,14 @@
     <br>
 
     <div class="botaoCamera">
-        <img id="botao" width="120px" height="100px" src="./img/botao.png">   <br>
+        <img id="botao" width="120px" height="100px" src="{{ asset('img/botao.png') }}">   <br>
     </div>    
 
     <br>
     <form id="upload-form">
     <div class="centered-upload-button">
         <input type="file" id="upload" name="upload" />
+        <br><br>
         <button id="uploadButton" type="submit">Avançar</button>
       </div>
     </form>

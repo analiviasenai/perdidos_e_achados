@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class FotoController extends Controller
 {
     public function create(){
-        return view('foto');
+        return view ('foto');
     }
 }
