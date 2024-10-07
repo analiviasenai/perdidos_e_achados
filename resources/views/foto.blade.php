@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=400, initial-scale=1.0">
     <title>Camera</title>   
     <link rel="stylesheet" href="{{ asset('css/foto.css') }}"href="{{ asset('js/foto.js') }}" >
-   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     
     <script src="./foto.js"></script>
 </head>
@@ -14,27 +14,29 @@
     <div class="header">
         <h1>ENCONTRE JÁ</h1>
         <img src="{{ asset('img/hamburguer.png') }}" onclick="toggleMenu()" width="50" height="50">
-    </div>
-       <div class="menu" id="menu">
-        <div class="close-icon" onclick="toggleMenu()">
-         ×
         </div>
-        <a href="#">
+    
+        </i>
+       </div>
+       <div class="menu" id="menu">
+        <i class="fas fa-times close-icon" onclick="toggleMenu()">
+        </i>
+        <a href="home.html">
          <i class="fas fa-home">
          </i>
          Página Inicial
         </a>
-        <a href="#">
+        <a href="foto.html">
          <i class="fas fa-plus-circle">
          </i>
          Inserir Objeto
         </a>
-        <a href="#">
+        <a href="login.html">
          <i class="fas fa-user-cog">
          </i>
          Conta Administrador
         </a>
-        <a href="#">
+        <a href="aviso">
          <i class="fas fa-bell">
          </i>
          Notificações
@@ -43,8 +45,7 @@
     </div>
     <div class="divider"></div>
     <div class="footer">
-        <img src="{{ asset('img/x.png') }}" height="40" width="40"></img>
-        
+        <img src="{{ asset('img/x.png') }}" height="40" width="40"></img> 
     </div>
     
     <div id="camera">

@@ -24,7 +24,8 @@ class PostarController extends Controller
         $foto->airline = $request->airline;
 
         $foto->save();
+
         
-        return redirect()->route('home')->with('sucesso', 'Foto postada!');
+        return redirect()->route('home')->with('Sucesso', 'Foto postada!');
     }
 }

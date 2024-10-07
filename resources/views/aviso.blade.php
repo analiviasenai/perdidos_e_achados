@@ -1,9 +1,8 @@
 <html>
 <head>
     <title>Encontre Já</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet"  href="{{ asset('css/aviso.css') }}" >
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <script>
         function toggleMenu() {
             var menu = document.getElementById('menu');
@@ -37,12 +36,35 @@
     <div class="header">
         ENCONTRE JÁ
         <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
-        <div id="menu" class="menu">
-            <a href="home.html">Página Inicial</a>
-            <a href="foto.html">Inserir Objeto</a>
-            <a href="login.html">Conta Administrador</a>
-            <a href="aviso.html">Notificações</a>
-        </div>
+        
+     
+    </div>
+    <div class="menu" id="menu">
+        <i class="fas fa-times close-icon" onclick="toggleMenu()">
+        </i>
+        <a href="home.html">
+         <i class="fas fa-home">
+         </i>
+         Página Inicial
+        </a>
+        <a href="foto.html">
+         <i class="fas fa-plus-circle">
+         </i>
+         Inserir Objeto
+        </a>
+        <a href="login.html">
+         <i class="fas fa-user-cog">
+         </i>
+         Conta Administrador
+        </a>
+        <a href="aviso.html">
+         <i class="fas fa-bell">
+         </i>
+         Notificações
+        </a>
+       </div>
+    </div>
+    </div>
     </div>
     <div class="search-bar">
         <div class="search-container">

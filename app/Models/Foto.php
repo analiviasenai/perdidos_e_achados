@@ -9,7 +9,7 @@ class Foto extends Model
 {
     use HasFactory;
 
-    $table = 'fotos_achadoseperdidos';
+    protected $table = 'fotos_achadoseperdidos'; 
 
     protected $fillable = ['nome', 'caminho'];
 }
