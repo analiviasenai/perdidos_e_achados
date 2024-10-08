@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,20 +29,20 @@
          <a href="{{ route('home') }}">
           Página Inicial
          </a>
-         <a href="foto.html">
+         <a href="foto">
           Inserir Objeto
          </a>
-         <a href="login.html">
+         <a href="login">
           Conta Administrador
          </a>
-         <a href="aviso.html">
+         <a href="aviso">
           Notificações
          </a>
         </div>
        </div>
        <div class="container">
         <div class="title-container">
-         <a href="home.html">
+         <a href="home">
           <i class="fas fa-arrow-left back-icon">
           </i>
          </a>
@@ -50,7 +50,9 @@
           NOVA PUBLICAÇÃO
          </div>
         </div>
-        <form method="POST" enctype="multipart/form-data">
+        <form action= "{{ route('postar.store') }}"  method="POST"
+         enctype="multipart/form-data">
+        @csrf
         <div class="image-container">
             <img id="uploaded-image" src="" alt="Imagem enviada">
             <input id="input-img" type="hidden" name="img" value="" />
@@ -86,7 +88,10 @@
           </select>
          </div>
         </div>
-        <a class="share-button" type="submit">
+        <input type="file" name="img" required>
+        <input type="text" name="descricao" required>
+        <input type="text" name="airline" required>
+        <button class="share-button" type="submit">
          Compartilhar
         </a>
         </form>

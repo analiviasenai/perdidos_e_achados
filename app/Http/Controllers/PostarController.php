@@ -18,6 +18,7 @@ class PostarController extends Controller
             'airline' => ['required']
         ]);
 
+        
         $foto = new Foto();
         $foto->source = $request->img;
         $foto->descricao = $request->descricao;

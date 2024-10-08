@@ -25,22 +25,21 @@
        <div class="menu" id="menu">
         <i class="fas fa-times close-icon" onclick="toggleMenu()">
         </i>
-        <a href="home.html">
          <i class="fas fa-home">
          </i>
          Página Inicial
         </a>
-        <a href="foto.html">
+        <a href="foto">
          <i class="fas fa-plus-circle">
          </i>
          Inserir Objeto
         </a>
-        <a href="login.html">
+        <a href="login">
          <i class="fas fa-user-cog">
          </i>
          Conta Administrador
         </a>
-        <a href="aviso.html">
+        <a href="aviso">
          <i class="fas fa-bell">
          </i>
          Notificações
