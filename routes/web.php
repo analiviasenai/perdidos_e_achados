@@ -49,3 +49,4 @@ Route::post('/login/home', [LoginController::class, 'logout'])->name('logout');
 
 // Rotas de foto
 Route::get('/foto/create', [FotoController::class, 'create']);
+
