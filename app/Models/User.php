@@ -11,8 +11,6 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    protected $table = 'usuarios';
-
 
     public function fotos()
 {

@@ -5,14 +5,55 @@
             background-color: #f5f5f5;
         }
         .header {
+            color:#4b0082;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: white;
-            color: #4b0082;
-            text-align: center;
-            padding: 15px 0;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            
+            .menu {
+                display: flex;
+                flex-direction: column; /* Coloca os itens em uma coluna */
+            }
+        
+            .menu a {
+                margin: 10px 0; /* Adiciona espaçamento entre os itens */
+                text-decoration: none; /* Remove o sublinhado dos links */
+                color: black; /* Muda a cor do texto */
+            }
+        
+            .menu a i {
+                margin-right: 8px; /* Adiciona um espaço entre o ícone e o texto */
+            }
+        }
+        .header h1 {
             font-size: 20px;
-            font-weight: bold;
+        }
+        .header .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
             position: relative;
-            border-bottom: 1px solid #ddd;
+        }
+        .search-bar input {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding-left: 40px;
+        }
+        .search-bar .fa-search {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ccc;
         }
         .menu {
             position: absolute;
