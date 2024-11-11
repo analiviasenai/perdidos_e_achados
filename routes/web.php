@@ -34,6 +34,7 @@ Route::prefix('user')->group(function () {
 
 // Rotas para home
 Route::get('/home/create', [HomeController::class, 'create']);
+
 Route::get('/user/home', [HomeController::class, 'create'])->name('home');
 
 // Rotas para login

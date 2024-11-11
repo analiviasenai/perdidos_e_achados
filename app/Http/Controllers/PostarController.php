@@ -13,14 +13,14 @@ class PostarController extends Controller
 
     public function store(Request $request){
         $request->validate([
-            'img' => ['required'],
+            'upload' => ['required'],
             'descricao' => ['required'],
             'airline' => ['required']
         ]);
 
         
         $foto = new Foto();
-        $foto->source = $request->img;
+        $foto->source = $request->upload;
         $foto->descricao = $request->descricao;
         $foto->airline = $request->airline;
 

@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Foto;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function create(){
-        return view('home');
+        $fotos = Foto::all();
+
+        return view('home', compact('fotos'));
     }
    
 }

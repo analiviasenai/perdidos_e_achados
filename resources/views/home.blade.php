@@ -96,6 +96,33 @@
          </i>
         </div>
        </div>
+       @foreach ($fotos as $foto)
+       <div class="post" data-name="carteira">
+        <div class="post-header">
+         <div class="avatar" style="background-color: #ff7043;">
+          E
+         </div>
+         <div class="name">
+          {{ $foto->id }}
+         </div>
+        </div>
+        <img src="{{ $foto->source }}" height="350" width="300"></img>
+        <div class="description">
+         {{ $foto->descricao }}
+        </div>
+        <div class="category">
+         {{ $foto->airline }}
+        </div>
+        <div class="date">
+         {{ $foto->created_at }}
+        </div>
+        <div class="verified perdido">
+         Perdido
+         <i class="fas fa-times">
+         </i>
+        </div>
+       </div>
+       @endforeach
        <div class="post" data-name="carteira">
         <div class="post-header">
          <div class="avatar" style="background-color: #ff7043;">
