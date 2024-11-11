@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostarController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Middleware\CheckUser;
 use Illuminate\Support\Facades\Route;
 
 // Rota para a página inicial
@@ -21,15 +22,15 @@ Route::prefix('user')->group(function () {
     Route::post('/upload', [UserController::class, 'upload'])->name('user.upload');
 
     // Rota para postar
-    Route::get('/postar', [PostarController::class, 'create'])->name('postar.create');
-    Route::post('/postar', [PostarController::class, 'store'])->name('postar.store');
+    Route::get('/postar', [PostarController::class, 'create'])->name('postar.create')->middleware(CheckUser::class);
+    Route::post('/postar', [PostarController::class, 'store'])->name('postar.store')->middleware(CheckUser::class);
 
     // Rota para aviso
     Route::get('/aviso', [AvisoController::class, 'create'])->name('aviso');
     //Route::get('/aviso', [AvisoController::class, 'create']);
 
     // Rota para foto
-    Route::get('/foto', [FotoController::class, 'create']);
+    Route::get('/foto', [FotoController::class, 'create'])->middleware(CheckUser::class);
 });
 
 // Rotas para home
@@ -50,3 +51,4 @@ Route::post('/login/home', [LoginController::class, 'logout'])->name('logout');
 
 // Rotas de foto
 Route::get('/foto/create', [FotoController::class, 'create']);
+

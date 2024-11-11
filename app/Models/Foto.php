@@ -12,4 +12,10 @@ class Foto extends Model
     protected $table = 'fotos_achadoseperdidos'; 
 
     protected $fillable = ['nome', 'caminho'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class); // Relacionamento com User
+    }
+
 }

@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Encontre Já</title>
-    <link rel="stylesheet"  href="{{ asset('css/aviso.css') }}" >
+    @vite(['resources/css/aviso.css'])
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <script>
         function toggleMenu() {
@@ -33,36 +33,50 @@
     </script>
 </head>
 <body>
-    <div class="header">
+<div class="header">
+    <h1>
         ENCONTRE JÁ
-        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
-        
-     
-    </div>
-    <div class="menu" id="menu">
-        <i class="fas fa-times close-icon" onclick="toggleMenu()">
-        </i>
-        <a href="home">
-         <i class="fas fa-home">
-         </i>
-         Página Inicial
-        </a>
-        <a href="foto">
-         <i class="fas fa-plus-circle">
-         </i>
-         Inserir Objeto
-        </a>
-        <a href="login">
-         <i class="fas fa-user-cog">
-         </i>
-         Conta Administrador
-        </a>
-        <a href="aviso">
-         <i class="fas fa-bell">
-         </i>
-         Notificações
-        </a>
-       </div>
+    </h1>
+    <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+</div>
+<div class="menu" id="menu">
+    <i class="fas fa-times close-icon" onclick="toggleMenu()"></i>
+    <a href="home">
+        <i class="fas fa-home"></i>
+        Página Inicial
+    </a>
+    <a href="foto">
+        <i class="fas fa-plus-circle"></i>
+        Inserir Objeto
+    </a>
+    <a href="login">
+        <i class="fas fa-user-cog"></i>
+        Conta Administrador
+    </a>
+    <a href="aviso">
+        <i class="fas fa-bell"></i>
+        Notificações
+    </a>
+</div>
+
+<style>
+    .menu {
+        display: flex;
+        flex-direction: column; /* Coloca os itens em uma coluna */
+    }
+
+    .menu a {
+        margin: 10px 0; /* Adiciona espaçamento entre os itens */
+        text-decoration: none; /* Remove o sublinhado dos links */
+        color: black; /* Muda a cor do texto */
+    }
+
+    .menu a i {
+        margin-right: 8px; /* Adiciona um espaço entre o ícone e o texto */
+    }
+</style>
+
+    
     </div>
     </div>
     </div>

@@ -88,7 +88,6 @@
           </select>
          </div>
         </div>
-        <input type="file" name="img" required>
         <input type="text" name="descricao" required>
         <input type="text" name="airline" required>
         <button class="share-button" type="submit">

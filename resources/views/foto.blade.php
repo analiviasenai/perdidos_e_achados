@@ -46,9 +46,7 @@
        </div>
     </div>
     <div class="divider"></div>
-    <div class="footer">
-        <img src="{{ asset('img/x.png') }}" height="40" width="40"></img> 
-    </div>
+   
     
     <div id="camera">
         <video id="video" autoplay></video>
