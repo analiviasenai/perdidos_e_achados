@@ -21,7 +21,7 @@ class CheckUser
          $user = Auth::user();
 
          // Verifica se o usuário não está autenticado ou não é "Ernesto" ou "Beatriz"
-         if (!$user || !in_array($user->name, ['Ernesto', 'Beatriz'])) {
+         if (!$user || !in_array($user->email, ['ernesto@example.com', 'beatriz@example.com'])) {
              return redirect('/'); // Redireciona para a página inicial
          }
         return $next($request);

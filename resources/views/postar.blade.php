@@ -50,6 +50,15 @@
           NOVA PUBLICAÇÃO
          </div>
         </div>
+        @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
         <form action= "{{ route('postar.store') }}"  method="POST"
          enctype="multipart/form-data">
         @csrf
@@ -65,29 +74,8 @@
             </script>
         </div>
         <div class="caption-input-container">
-         <textarea class="caption-input" placeholder=" " name="descricao">
-         </textarea>
         </div>
         <div class="options">
-         <div class="option">
-          <i class="fas fa-folder">
-          </i>
-          <select class="select-category" name="airline">
-           <option value="eletronicos">
-            Eletrônicos
-           </option>
-           <option value="vestuario">
-            Vestuário
-           </option>
-           <option value="objetos">
-            Objetos
-           </option>
-           <option value="documento">
-            Documento
-           </option>
-          </select>
-         </div>
-        </div>
         <input type="text" name="descricao" required>
         <input type="text" name="airline" required>
         <button class="share-button" type="submit">

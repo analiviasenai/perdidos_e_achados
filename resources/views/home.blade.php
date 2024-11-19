@@ -24,26 +24,32 @@
        </div>
        <div class="menu" id="menu">
         <i class="fas fa-times close-icon" onclick="toggleMenu()">
-        </i>
+             </i>
+
+        <a href="home">
          <i class="fas fa-home">
          </i>
-         Página Inicial
+        Página inicial
         </a>
+        
         <a href="foto">
          <i class="fas fa-plus-circle">
          </i>
          Inserir Objeto
         </a>
+
         <a href="login">
          <i class="fas fa-user-cog">
          </i>
          Conta Administrador
         </a>
+
         <a href="aviso">
          <i class="fas fa-bell">
          </i>
          Notificações
         </a>
+        
        </div>
        <div class="post" data-name="eletrônico">
         <div class="post-header">
@@ -64,10 +70,6 @@
         <div class="date">
          06/08
         </div>
-        <div class="verified perdido">
-         Perdido
-         <i class="fas fa-times">
-         </i>
         </div>
        </div>
        <div class="post" data-name="garrafa">
@@ -90,20 +92,16 @@
         <div class="date">
          06/08
         </div>
-        <div class="verified">
-         Achado
-         <i class="fas fa-check">
-         </i>
         </div>
        </div>
        @foreach ($fotos as $foto)
        <div class="post" data-name="carteira">
         <div class="post-header">
          <div class="avatar" style="background-color: #ff7043;">
-          E
+         {{ $foto->user->name[0] }}
          </div>
          <div class="name">
-          {{ $foto->id }}
+          {{ $foto->user->name}}
          </div>
         </div>
         <img src="{{ $foto->source }}" height="350" width="300"></img>
@@ -116,10 +114,6 @@
         <div class="date">
          {{ $foto->created_at }}
         </div>
-        <div class="verified perdido">
-         Perdido
-         <i class="fas fa-times">
-         </i>
         </div>
        </div>
        @endforeach
@@ -142,10 +136,6 @@
         <div class="date">
          05/08
         </div>
-        <div class="verified perdido">
-         Perdido
-         <i class="fas fa-times">
-         </i>
         </div>
        </div>
        <div class="post" data-name="chaves">
@@ -168,10 +158,6 @@
         <div class="date">
          05/08
         </div>
-        <div class="verified">
-         Achado
-         <i class="fas fa-check">
-         </i>
         </div>
        </div>
        <script>

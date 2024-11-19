@@ -13,9 +13,9 @@ class User extends Authenticatable
 
 
     public function fotos()
-{
-    return $this->hasMany(Foto::class);
-}
+    {
+        return $this->hasMany(Foto::class);
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -46,7 +46,7 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
-            
+
         ];
     }
 }

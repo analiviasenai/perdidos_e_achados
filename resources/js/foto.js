@@ -1,10 +1,3 @@
-//funçao do menu
-
-function toggleMenu() {
-    var menu = document.getElementById('menu');
-    menu.classList.toggle('active');
-}
-
 
 
 //funcao camera
@@ -76,5 +69,21 @@ window.addEventListener("DOMContentLoaded", startVideoFromCamera)
     } else {
       console.error('Elementos não encontrados');
     }
+  
+  
+    //funçao do menu
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      if (menu.style.display === 'none' || menu.style.display === '') {
+          menu.style.display = 'block';
+      } else {
+          menu.style.display = 'none';
+      }
+    }
+
+    var menu = document.getElementById('menu');
+    menu.addEventListener('click', toggleMenu);
+    var menu2 = document.getElementById('img-menu');
+    menu2.addEventListener('click', toggleMenu);
   });
   

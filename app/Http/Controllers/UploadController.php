@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Foto;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
@@ -18,9 +20,9 @@ class UploadController extends Controller
             $path = $request->file('photo')->store('photos', 'public'); // Armazenar na pasta "storage/app/public/photos"
             
             // Salvar o caminho no banco de dados
-            $user = new User(); // Substitua por seu modelo
-            $user->photo_path = $path; // Salve o caminho no atributo do modelo
-            $user->save();
+            $foto = new Foto(); // Substitua por seu modelo
+            $foto->source = $path; // Salve o caminho no atributo do modelo
+            $foto->save();
             
             return back()->with('success', 'Foto enviada com sucesso!');
         }
