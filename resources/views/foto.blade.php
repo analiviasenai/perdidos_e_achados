@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=400, initial-scale=1.0">
     <title>Camera</title>   
     @vite(['resources/css/foto.css', 'resources/js/foto.js'])
-    <link rel="stylesheet" href="{{ asset('css/foto.css') }}"href="{{ asset('js/foto.js') }}" > -->
+    <link rel="stylesheet" href="{{ asset('css/foto.css') }}"href="{{ asset('js/foto.js') }}" >
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="foto.css" rel="stylesheet"/>
     <script>
          function toggleMenu() {
            var menu = document.getElementById('menu');
@@ -26,8 +27,6 @@
         <i class="fas fa-bars menu-icon" onclick="toggleMenu()">
         </i>
        </div>
-       <div class="search-bar">
-        <i class="fas fa-search">
         </i>
        <div class="menu" id="menu">
         <i class="fas fa-times close-icon" onclick="toggleMenu()">
@@ -59,7 +58,7 @@
         
        </div>
    
-    
+    <br>
     <div id="camera">
         <video id="video" autoplay></video>
         <canvas id="captura"></canvas>

@@ -1,27 +1,4 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-}
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #ccc;
-}
-.header h1 {
-    font-size: 24px;
-    color: #331874;
-    margin: 0;
-    flex-grow: 1;
-    text-align: center;
-}
-.header img {
-    font-size: 24px;
-    color: #4a148c;
-}
+
 .menu {
     position: absolute;
     top: 50px;
@@ -82,7 +59,7 @@ body {
 }
 
 
-/*camera*/
+/*camera
 
 #camera{
     width: 700px;
@@ -98,8 +75,8 @@ body {
 .botaoCamera{
     width: 100%;
     display: flex;
-    justify-content: center; /* Alinha horizontalmente ao centro */
-    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: center; /* Alinha horizontalmente ao centro 
+    align-items: center; /* Alinha verticalmente ao centro 
 }
 #botao{
     margin-left: auto;
@@ -112,13 +89,13 @@ body {
 }
 
 
-/*upload*/
+/*upload
 
 .centered-upload-button {
   display: block;
   margin: 0 auto;
   text-align: center;
-  max-width: 300px; /* adjust the max width as needed */
+  max-width: 300px; /* adjust the max width as needed 
 }
 
 @media (max-width:700px){
@@ -140,3 +117,4 @@ body {
     }
 
 }
+    */

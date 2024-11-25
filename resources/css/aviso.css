@@ -1,161 +1,129 @@
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        .header {
-            color:#4b0082;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: white;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            
-            .menu {
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    background-color: #3f51b5;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.header {
+    color: #4b0082;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.header h1 {
+    font-size: 20px;
+}
+
+.header .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilo do Menu */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px;  /* Menu começa oculto à esquerda */
+    width: 250px;
+    height: 100%;
+    background-color: #000000;  /* Cor de fundo do menu */
     color: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
+    transition: left 0.3s ease-in-out;  /* Animação para deslizar o menu */
+    padding-top: 60px;
     z-index: 1000;
 }
+
+.menu.show {
+    left: 0;  /* Quando a classe 'show' for adicionada, o menu se move para a direita */
+}
+
 .menu a {
     padding: 15px 20px;
     text-decoration: none;
     color: white;
-    border-bottom: 1px solid #5c6bc0;
+    border-bottom: 1px solid #151516;
 }
+
 .menu a:last-child {
     border-bottom: none;
 }
+
 .menu a:hover {
-    background-color: #5c6bc0;
+    background-color: #5c6bc0;  /* Cor de fundo ao passar o mouse sobre o item */
 }
+
 .menu .close-icon {
     align-self: flex-end;
     padding: 10px;
     cursor: pointer;
 }
-        }
-        .header h1 {
-            font-size: 20px;
-        }
-        .header .menu-icon {
-            font-size: 24px;
-            cursor: pointer;
-        }
-        .search-bar {
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-            position: relative;
-        }
-        .search-bar input {
-            width: 90%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 20px;
-            padding-left: 40px;
-        }
-        .search-bar .fa-search {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #ccc;
-        }
-        .menu {
-            position: absolute;
-            top: 50px;
-            right: 20px;
-            background-color: #3f51b5;
-            color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            display: none;
-            flex-direction: column;
-            z-index: 1000;
-        }
-        .menu a {
-            padding: 15px 20px;
-            text-decoration: none;
-            color: white;
-            border-bottom: 1px solid #5c6bc0;
-        }
-        .menu a:last-child {
-            border-bottom: none;
-        }
-        .menu a:hover {
-            background-color: #5c6bc0;
-        }
-        .menu .close-icon {
-            align-self: flex-end;
-            padding: 10px;
-            cursor: pointer;
-        }
-        .search-bar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-            background-color: white;
-            border-bottom: 1px solid #ddd;
-        }
-        .search-bar .search-container {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-        }
-        .search-bar input {
-            width: 100%;
-            padding: 10px 10px 10px 35px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .search-bar .search-icon {
-            position: absolute;
-            left: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 20px;
-            color: #4b0082;
-        }
-        .card {
-            background-color: white;
-            border: 1px solid #4b0082;
-            border-radius: 5px;
-            margin: 10px;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .card .card-header {
-            display: flex;
-            
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #4b0082;
-        }
-        .card .card-header .icon {
-            font-size: 24px;
-            color: #FFD700; /* Yellow color for the warning icon */
-        }
-        .card .card-header .date-time {
-            font-size: 14px;
-            color: #333;
-        }
-        .card .card-body {
-            font-size: 14px;
-            color: #666;
-        }
-        .card .card-body .alert {
-            font-weight: bold;
-            color: #4b0082;
-        }
+
+/* Barra de Pesquisa */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+.search-bar input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding-left: 40px;
+}
+
+.search-bar .fa-search {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc;
+}
+
+/* Cards */
+.card {
+    background-color: white;
+    border: 1px solid #4b0082;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4b0082;
+}
+
+.card .card-header .icon {
+    font-size: 24px;
+    color: #FFD700; /* Yellow color for the warning icon */
+}
+
+.card .card-header .date-time {
+    font-size: 14px;
+    color: #333;
+}
+
+.card .card-body {
+    font-size: 14px;
+    color: #666;
+}
+
+.card .card-body .alert {
+    font-weight: bold;
+    color: #4b0082;
+}

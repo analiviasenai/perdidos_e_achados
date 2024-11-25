@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>
+        <h1 ali>
          ENCONTRE JÁ
         </h1>
         <i class="fas fa-bars menu-icon" onclick="toggleMenu()">
@@ -51,54 +51,12 @@
         </a>
         
        </div>
-       <div class="post" data-name="eletrônico">
-        <div class="post-header">
-         <div class="avatar" style="background-color: #ff7043;">
-          E
-         </div>
-         <div class="name">
-          Ernesto Coordenador
-         </div>
-        </div>
-        <img src="{{ asset('img/celularperdido.png') }}" height="350" width="300"></img>
-        <div class="description">
-         Encontrado no refeitório, às 12:45
-        </div>
-        <div class="category">
-         Eletrônico
-        </div>
-        <div class="date">
-         06/08
-        </div>
-        </div>
-       </div>
-       <div class="post" data-name="garrafa">
-        <div class="post-header">
-         <div class="avatar" style="background-color: #e91e63;">
-          B
-         </div>
-         <div class="name">
-          Beatriz Limpeza
-         </div>
-        
-        </div>
-        <img src="{{ asset('img/garrafa.png') }}" height="350" width="300"></img>
-        <div class="description">
-         Encontrado na sala de limpeza, às 14:30
-        </div>
-        <div class="category">
-         Garrafa
-        </div>
-        <div class="date">
-         06/08
-        </div>
-        </div>
-       </div>
+       
        @foreach ($fotos as $foto)
        <div class="post" data-name="carteira">
         <div class="post-header">
          <div class="avatar" style="background-color: #ff7043;">
-         {{ $foto->user->name[0] }}
+         {{ $foto->user->name[0]}}
          </div>
          <div class="name">
           {{ $foto->user->name}}
@@ -117,50 +75,10 @@
         </div>
        </div>
        @endforeach
-       <div class="post" data-name="carteira">
-        <div class="post-header">
-         <div class="avatar" style="background-color: #ff7043;">
-          E
-         </div>
-         <div class="name">
-          Ernesto Coordenador
-         </div>
-        </div>
-        <img src="{{ asset('img/carteira.png') }}" height="350" width="300"></img>
-        <div class="description">
-         Encontrado na biblioteca, às 10:00
-        </div>
-        <div class="category">
-         Carteira
-        </div>
-        <div class="date">
-         05/08
-        </div>
-        </div>
-       </div>
-       <div class="post" data-name="chaves">
-        <div class="post-header">
-         <div class="avatar" style="background-color: #e91e63;">
-          B
-         </div>
-         <div class="name">
-          Beatriz Limpeza
-         </div>
-    
-        </div>
-        <img src="{{ asset('img/chavesperdidas.png') }}" height="350" width="300"></img>
-        <div class="description">
-         Encontrado no corredor, às 09:15
-        </div>
-        <div class="category">
-         Chaves
-        </div>
-        <div class="date">
-         05/08
-        </div>
-        </div>
-       </div>
-       <script>
+      
+</body>
+
+<script>
         function toggleMenu() {
                  var menu = document.getElementById('menu');
                  if (menu.style.display === 'flex') {
@@ -187,5 +105,5 @@
                  }
              }
        </script>
-</body>
+
 </html>
