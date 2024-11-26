@@ -75,9 +75,9 @@
         </div>
         <div class="caption-input-container">
         </div>
-        <div class="options">
-        <input type="text" name="descricao" required>
-        <input type="text" name="airline" required>
+        <div class="options">    
+        <input type="text" name="descricao" placeholder="descrição">
+        <input type="text" name="airline"  placeholder="categoria">
         <button class="share-button" type="submit">
          Compartilhar
         </a>

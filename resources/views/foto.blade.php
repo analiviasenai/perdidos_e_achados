@@ -7,7 +7,6 @@
     @vite(['resources/css/foto.css', 'resources/js/foto.js'])
     <link rel="stylesheet" href="{{ asset('css/foto.css') }}"href="{{ asset('js/foto.js') }}" >
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="foto.css" rel="stylesheet"/>
     <script>
          function toggleMenu() {
            var menu = document.getElementById('menu');

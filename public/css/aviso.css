@@ -1,110 +1,114 @@
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        .header {
-            background-color: white;
-            color: #4b0082;
-            text-align: center;
-            padding: 15px 0;
-            font-size: 20px;
-            font-weight: bold;
-            position: relative;
-            border-bottom: 1px solid #ddd;
-        }
-        .menu-icon {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 24px;
-            color: #4b0082;
-            cursor: pointer;
-        }
-        .menu {
-            display: none;
-            position: absolute;
-            right: 15px;
-            top: 40px;
-            background-color: #4654A3;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            width: 200px;
-        }
-        .menu a {
-            display: block;
-            padding: 15px;
-            color: white;
-            text-decoration: none;
-            border-bottom: 1px solid #ddd;
-        }
-        .menu a:last-child {
-            border-bottom: none;
-        }
-        .menu a:hover {
-            background-color: #3b4a8a;
-        }
-        .search-bar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-            background-color: white;
-            border-bottom: 1px solid #ddd;
-        }
-        .search-bar .search-container {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-        }
-        .search-bar input {
-            width: 100%;
-            padding: 10px 10px 10px 35px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .search-bar .search-icon {
-            position: absolute;
-            left: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 20px;
-            color: #4b0082;
-        }
-        .card {
-            background-color: white;
-            border: 1px solid #4b0082;
-            border-radius: 5px;
-            margin: 10px;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .card .card-header {
-            display: flex;
-            
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #4b0082;
-        }
-        .card .card-header .icon {
-            font-size: 24px;
-            color: #FFD700; /* Yellow color for the warning icon */
-        }
-        .card .card-header .date-time {
-            font-size: 14px;
-            color: #333;
-        }
-        .card .card-body {
-            font-size: 14px;
-            color: #666;
-        }
-        .card .card-body .alert {
-            font-weight: bold;
-            color: #4b0082;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.header {
+    color: #4b0082;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+.header h1 {
+    font-size: 20px;
+}
+.header .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+color: #4a148c; /* Ícone na cor branca */
+    border-radius: 5px;
+    padding: 5px;
+    width: 40px; /* Largura do retângulo */
+    height: 40px; /* Altura do retângulo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu {
+    position: absolute;
+    top: 60px; /* Ajuste para ficar abaixo do cabeçalho */
+    right: 20px;
+    background-color: #3f51b5;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Inicialmente escondido */
+    flex-direction: column;
+    z-index: 1000;
+}
+.menu.show {
+    display: flex; /* Mostra o menu quando a classe 'show' é adicionada */
+}
+.menu a {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid #5c6bc0;
+}
+.menu a:last-child {
+    border-bottom: none;
+}
+.menu a:hover {
+    background-color: #5c6bc0;
+}
+.menu .close-icon {
+    align-self: flex-end;
+    padding: 10px;
+    cursor: pointer;
+}
+.search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: relative;
+}
+.search-bar input {
+    width: 95%; /* Aumenta o comprimento da barra de busca */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding-left: 40px;
+}
+.search-bar .fa-search {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc;
+}
+.card {
+    background-color: white;
+    border: 1px solid #4b0082;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4b0082;
+}
+.card .card-header .icon {
+    font-size: 24px;
+    color: #FFD700; /* Cor amarela para o ícone de alerta */
+}
+.card .card-header .date-time {
+    font-size: 14px;
+    color: #333;
+}
+.card .card-body {
+    font-size: 14px;
+    color: #666;
+}
+.card .card-body .alert {
+    font-weight: bold;
+    color: #4b0082;
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>página Inicial</title>
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-    
+    @vite(['resources/css/home.css'])
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     
 </head>
@@ -18,9 +18,10 @@
         </i>
        </div>
        <div class="search-bar">
-        <i class="fas fa-search">
         </i>
-        <input id="searchInput" onkeyup="filterPosts()" placeholder="Search..." type="text"/>
+
+            <!--<i class="fas fa-search">-->
+            <input id="searchInput" onkeyup="filterPosts()" placeholder=" Buscar..." type="text" />
        </div>
        <div class="menu" id="menu">
         <i class="fas fa-times close-icon" onclick="toggleMenu()">

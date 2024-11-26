@@ -47,7 +47,7 @@
     </div>
     <div class="container">
         <div class="logo">
-            <img alt="Magnifying glass icon" height="50" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-Hh5RPsKhtBPsWCFSiEKnUJ6x/user-8qgiVpCV0U0b7zDjfFInHgjl/img-zkLoF30B5dbiw7SRaTFIV0dc.png?st=2024-09-16T18%3A30%3A40Z&amp;se=2024-09-16T20%3A30%3A40Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-16T00%3A26%3A25Z&amp;ske=2024-09-17T00%3A26%3A25Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=dkOSMInu7qrSnV6fSNnjZDem3zLMfpt%2BzGhzUZYt9vo%3D" width="50"/>
+            <img height="50" src="{{ asset('img/logo.png') }}" width="50"/>
         </div>
         <div class="logo-text">ENCONTRE JÁ</div>
         

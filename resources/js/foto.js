@@ -84,6 +84,9 @@ window.addEventListener("DOMContentLoaded", startVideoFromCamera)
     var menu = document.getElementById('menu');
     menu.addEventListener('click', toggleMenu);
     var menu2 = document.getElementById('img-menu');
-    menu2.addEventListener('click', toggleMenu);
+    if(menu2){
+      menu2.addEventListener('click', toggleMenu);
+    }
+    
   });
   

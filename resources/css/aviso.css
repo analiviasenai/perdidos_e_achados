@@ -22,33 +22,38 @@ body {
 .header .menu-icon {
     font-size: 24px;
     cursor: pointer;
+    color: #4a148c; 
+    border-radius: 5px;
+    padding: 5px;
+    width: 40px;
+    height: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Estilo do Menu */
 .menu {
-    position: fixed;
-    top: 0;
-    left: -250px;  /* Menu começa oculto à esquerda */
-    width: 250px;
-    height: 100%;
-    background-color: #000000;  /* Cor de fundo do menu */
+    position: absolute;
+    top: 60px; 
+    right: 20px;
+    background-color: #3f51b5;
     color: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: left 0.3s ease-in-out;  /* Animação para deslizar o menu */
-    padding-top: 60px;
+    display: none; 
+    flex-direction: column;
     z-index: 1000;
 }
 
 .menu.show {
-    left: 0;  /* Quando a classe 'show' for adicionada, o menu se move para a direita */
+    display: flex; 
 }
 
 .menu a {
     padding: 15px 20px;
     text-decoration: none;
     color: white;
-    border-bottom: 1px solid #151516;
+    border-bottom: 1px solid #5c6bc0;
 }
 
 .menu a:last-child {
@@ -56,7 +61,7 @@ body {
 }
 
 .menu a:hover {
-    background-color: #5c6bc0;  /* Cor de fundo ao passar o mouse sobre o item */
+    background-color: #5c6bc0;
 }
 
 .menu .close-icon {
@@ -65,7 +70,6 @@ body {
     cursor: pointer;
 }
 
-/* Barra de Pesquisa */
 .search-bar {
     display: flex;
     justify-content: center;
@@ -74,7 +78,7 @@ body {
 }
 
 .search-bar input {
-    width: 90%;
+    width: 1100px; /* Mantém a largura original */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -89,7 +93,13 @@ body {
     color: #ccc;
 }
 
-/* Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os cards */
+    padding: 10px; /* Adiciona um padding ao contêiner dos cards */
+}
+
 .card {
     background-color: white;
     border: 1px solid #4b0082;
@@ -97,6 +107,8 @@ body {
     margin: 10px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px); /* 3 cards por linha */
+    box-sizing: border-box; /* Para incluir padding e border no cálculo da largura */
 }
 
 .card .card-header {
@@ -110,7 +122,7 @@ body {
 
 .card .card-header .icon {
     font-size: 24px;
-    color: #FFD700; /* Yellow color for the warning icon */
+    color: #FFD700; 
 }
 
 .card .card-header .date-time {
@@ -126,4 +138,41 @@ body {
 .card .card-body .alert {
     font-weight: bold;
     color: #4b0082;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 18px; /* Mantém o design ajustado para telas menores */
+    }
+
+    .header .menu-icon {
+        font-size: 20px; /* Ajusta o tamanho do ícone do menu */
+    }
+
+    .search-bar input {
+        width: 90%; /* Ajusta a largura da barra de pesquisa em telas menores */
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards por linha em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 16px; /* Ajust a o tamanho do título para telas muito pequenas */
+    }
+
+    .header .menu-icon {
+        font-size: 18px; /* Ajusta o tamanho do ícone do menu */
+    }
+
+    .search-bar input {
+        width: 100%; /* Ajusta a largura da barra de pesquisa em telas muito pequenas */
+    }
+
+    .card {
+        flex: 1 1 100%; /* 1 card por linha em telas muito pequenas */
+    }
 }

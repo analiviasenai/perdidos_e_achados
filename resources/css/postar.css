@@ -144,3 +144,4 @@ body {
 .caption-input:not(:placeholder-shown) + .caption-placeholder {
     display: none;
 }
+
